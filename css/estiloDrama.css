@@ -53,7 +53,7 @@ header nav a.activo {
 }
 .input__container {
 	position: relative;
-	background: rgba(255, 255, 255, 0.664);
+	background: rgba(34, 147, 246, 0.664);
 	padding: 10px 15px;
 	display: flex;
 	justify-content: center;
@@ -62,8 +62,6 @@ header nav a.activo {
 	border-radius: 22px;
 	max-width: 300px;
 	transition: transform 400ms;
-	transform-style: preserve-3d;
-	transform: rotateX(15deg) rotateY(-20deg);
 	perspective: 500px;
   }
   

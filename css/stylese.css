@@ -53,7 +53,7 @@ header nav a.activo {
 }
 .input__container {
 	position: relative;
-	background: rgba(255, 255, 255, 0.664);
+	background: rgba(34, 147, 246, 0.664);
 	padding: 10px 15px;
 	display: flex;
 	justify-content: center;
@@ -62,8 +62,6 @@ header nav a.activo {
 	border-radius: 22px;
 	max-width: 300px;
 	transition: transform 400ms;
-	transform-style: preserve-3d;
-	transform: rotateX(15deg) rotateY(-20deg);
 	perspective: 500px;
   }
   
@@ -78,7 +76,7 @@ header nav a.activo {
 	filter: blur(30px);
 	border-radius: 20px;
 	background-color: #999cff;
-	background-image: radial-gradient(at 85% 51%, hsla(60,60%,61%,1) 0px, transparent 50%),
+	background-image: radial-gradient(at 85% 51%, hsla(30,30%,31%,1) 0px, transparent 50%),
 	  radial-gradient(at 74% 68%, hsla(235,69%,77%,1) 0px, transparent 50%),
 	  radial-gradient(at 64% 79%, hsla(284,72%,73%,1) 0px, transparent 50%),
 	  radial-gradient(at 75% 16%, hsla(283,60%,72%,1) 0px, transparent 50%),
