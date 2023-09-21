@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/estiloAccion.css">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+	<title>PELICULIX</title>
+</head>
+<body>
+	<header>
+        <div class="contenedor">
+            <a href="index.html" class="logotipo">PELICULIX</a>
+            <nav>
+                <a href="index.html" class="activo">Inicio</a>
+                <a href="Peliculas.html">Películas</a>
+                <a href="Series.html">Series</a>
+            </nav>
+            <div class="categorias">
+                <select id="categorias" onchange="redireccionar()">
+                    <option value="" disabled selected>Selecciona una categoría</option>
+                    <option value="Accion.html">Acción</option>
+                    <option value="Terror.html">Terror</option>
+                    <option value="Comedia.html">Comedia</option>
+                    <option value="Ciencia_ficcion.html">Ciencia Ficción</option>
+                    <option value="Drama.html">Drama</option>
+                    <!-- Agrega más opciones de categorías según tus necesidades y asegúrate de que los archivos .html existan en tu proyecto -->
+                </select>
+            </div>
+            <div class="input__container">
+                <div class="shadow__input"></div>
+                <button class="input__button__shadow">
+                    <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" height="20px" width="20px">
+                        <path d="M4 9a5 5 0 1110 0A5 5 0 014 9zm5-7a7 7 0 104.2 12.6.999.999 0 00.093.107l3 3a1 1 0 001.414-1.414l-3-3a.999.999 0 00-.107-.093A7 7 0 009 2z" fill-rule="evenodd" fill="#17202A"></path>
+                    </svg>
+                </button>
+                <input type="text" name="text" class="input__search" placeholder="¿Qué deseas buscar?">
+            </div>
+        </div>
+    </header>
+
+	<main>
+		<div class="pelicula-principal">
+			<div class="contenedor">
+				<h3 class="titulo">Echo 3</h3>
+				<p class="descripcion">
+					Cuando la científica Amber Chesborough desaparece en la frontera entre Colombia y Venezuela, su hermano, Bambi, y su marido, Prince, luchan por encontrarla con el telón de fondo de una guerra secreta.
+                </p>
+                <a href="#" class="play" onclick="toggleVideo();">
+                    <img src="./img/play.png" />Trailer
+				<button role="button" class="boton"><i class="fas fa-info-circle"></i>Más información</button>
+                </a>
+			</div>
+		</div>
+        <section class="trailer">
+            <video src="./img/Echo 3 — Official Trailer _ Apple TV+.mp4" controls="true"></video>
+            <img src="./img/close.png" class="close" onclick="toggleVideo();">
+    
+          </section>
+
+
+		<div class="peliculas-recomendadas contenedor">
+			<div class="contenedor-titulo-controles">
+				<h3>TOP 10 series de accion mas vistas</h3>
+				<div class="indicadores"></div>
+			</div>
+
+			<div class="contenedor-principal">
+				<button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+
+				<div class="contenedor-carousel">
+					<div class="carousel">
+						<div class="pelicula">
+                            <a href="https://www.youtube.com/watch?v=2kOMw4mm2mU">
+                                <img src="img/rueda.jpg" alt="">
+							</a>			
+						</div>
+						<div class="pelicula">
+                            <a href="https://www.youtube.com/watch?v=S4NptaARZiU">
+                                <img src="img/citadel.jpg" alt="">
+						</div>
+						<div class="pelicula">
+                            <a href="https://www.youtube.com/watch?v=YYW64RgFdxk">
+                                <img src="img/station.jpg" alt="">
+						</div>
+						<div class="pelicula">
+                            <a href="https://www.youtube.com/watch?v=ETY44yszyNc">
+                                <img src="img/Captura de pantalla 2023-09-20 200740.png" alt="">
+						</div>
+						<div class="pelicula">
+                            <a href="https://www.google.com/search?cs=0&hl=es&rlz=1C1CHBF_esCO1005CO1005&sca_esv=567074376&sxsrf=AM9HkKkWZUJmXRJ3HfaXTrTd_VLO9LG7Vw:1695251649129&q=Operativo:+Lioness&stick=H4sIAAAAAAAAAJ2Wv2_kRBTHdwMJySag3J6AEJolBTrcrD3-NY6QcoCugLvTSXcpEdaux_asf63tsfyr4YREjyioQEJXUVCA6ChQBAXidCCBEIgGITryF1BcgZOdN7vbstV8PG_fPL-Z-X69vXn09NgfKwrzDMXKkYb2mZvPXDYi7mjiOLN58rC_iEh0YurMyID9wrajUpWBPQPZNaUYOJialqEy8f_YSmWUK6aIV3Rq6FYKzFTNRoUeCOYVAedVlsa1H4l5S65bktkiXx7LNo1KwWlQ1TlCwHQaBmlmif97mtzmTekLLrWiLZRW5Nc1OsWeI-YLXOd2LeYzzTRruyRiXq2MQDGW-YhBfHnaiH4glDqGJurLUkbaCov-FaxtWbWsL_enrEiaSsRj3UgsZD3s747jsdwVmFe-6F5oVHGMl9X7VEWWj8RuUA95vm-L7gc41Lxa7lYfXGRjuC6XS3lpTEPcesut0rCSWeJVqBzYRI0twaQsHQOLraN6HiesEVtDmpYqRiCK9VhLKKtj4DRtHNywbqt2LopRY8yWbZTDPC8bkduzw9jDZr08lqVvJJWITwwtMQkTa_vEMGMvLPiL2lGSqUwsbJqhj2WRLMpsGedtKAr35LRN5eXigYqwJ6O_--f93f1__v3z6uFf_Q8__-G3_h_9wf6t-Zy5UXPXjSaFS07nw4PB1o2kmBXN8JnDvcHl-igkpR4Nbw5277nF6fz2nMy8Zvjq8Hiwc9uNp27O7njDVwaDN-ZR5DpFd_-GLx6-MHh-7IgH46K003zu55OYHW9c2zh6B938-pePftq6caXX_a6_eff64bPS1cH26aSeJ_O4ufLlc-_-_rbz88nRSztdwKf3Xz4_uQg9-35knB08Oepf6ykd3v91Z3Qm9T7Y6L_3zWffbm1v9_d7aGO7t_fgiU92B0-91qnBd18lw7f-X6VHw_P3P368uzdcacPh1r1LsTlaeSYtOj2tSJ4mGHF05Mw2St0DVFJUo8wA1DFCGJdLjMwsdgBN6lHVaQDDuo1CvZXWtxiwyR1mMjHLT660fhil9XshcKFogKqSyr6RCTTVUsMimMsFIFcjQC6mAg0c1r4ird8BQK40gIEiIzNg0vqZBQydxijKEJCrpMDFzQfkmgrI7y0gV0RALqAcfVW2taiFzHAPAbk-AQaNUbFMIPcWaV1vALWMZmkBRYLaAHKdF1iqdWtBNyhx_LYWZYByAXKVBGwoCVAFqQLFqUxMoRsg6IBcUQG5_QESiruDpXEMkRdqJYENBfWW1mVIWndOad2IBS4EEJDrH2CSZUEtTmyqOVmREEgF-gfIdVhadzhAbkCAXsjSyqOA3M4AGcF2guCogJkBZmHiaDl0A6wdsA4yItfQWPgwAOS-DMg_AwD5VwPHQsFWk8k6oK6aoUXhfQuzmOI2hYMEDiwtDFamQeD40qrbSpf-pOiFZkpLq5Iu5UuLa0y1xdi2TL9TmBXHWYydLmvIY7yUlomzGEc4Lux8MU6d0jNKacWW5d7rB6uqGrtkNrF9N8ld5v746NHJg83hndTNJ8WsnB-PbnUxLmNfbG78ByaSTWfeCQAA&sa=X&ved=2ahUKEwjcqufCqLqBAxU4QTABHd1uBgAQ8sMGegUIEhCnAQ&biw=1366&bih=643&dpr=1#fpstate=ive&vld=cid:f3ceb4c0,vid:2sJTSw2qWnQ,st:0">
+                                <img src="img/Captura.png" alt="">
+						</div>
+						<div class="pelicula">
+                            <a href="https://www.youtube.com/watch?v=-WYdUaK54fU">
+                                <img src="img/vvv.png" alt="">
+						</div>
+						<div class="pelicula">
+                            <a href="https://www.youtube.com/watch?v=kLw1UrDqC9Q">
+                                <img src="img/anillos.avif" alt="">
+						</div>
+						<div class="pelicula">
+                            <a href="https://www.youtube.com/watch?v=fH3gc-kr8Rc">
+                                <img src="img/mar.jpg" alt="">
+						</div>
+						<div class="pelicula">
+                            <a href="https://https://www.youtube.com/watch?v=f4mo0vdiI5c">
+                                <img src="img/ff.png" alt="">
+						</div>
+						<div class="pelicula">
+                            <a href="https://https://www.netflix.com/us-es/title/80242724">
+                                <img src="img/d.png" alt="">
+						</div>
+					</div>
+				</div>
+
+				<button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+			</div>
+		</div>
+
+	</main>
+	<script>
+        function toggleVideo(){
+            const trailer= document.querySelector(".trailer");
+            const video = document.querySelector("video");
+            trailer.classList.toggle("active");
+            video.currentTime=0;
+            video.pause();
+
+        }
+    </script>
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	<script src="js/main.js"></script>
+
+    <script>
+        function redireccionar() {
+            var seleccion = document.getElementById("categorias").value;
+            if (seleccion) {
+                window.location.href = seleccion; // Redirige a la página de categoría seleccionada
+            }
+        }
+    </script>
+</body>
+</html>
