@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/estilos.css">
 	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="/css/Buscador.css">
 	<title>PELICULIX</title>
 </head>
 <body>
@@ -16,14 +17,14 @@
                 <a href="Peliculas.html">Películas</a>
                 <a href="Series.html">Series</a>
             </nav>
-            <div class="categorias">
+            <div class="input__container">
                 <select id="categorias" onchange="redireccionar()">
-                    <option value="" disabled selected>Selecciona una categoría</option>
-                    <option value="Accion.html">Acción</option>
-                    <option value="Terror.html">Terror</option>
-                    <option value="Comedia.html">Comedia</option>
-                    <option value="Ciencia_ficcion.html">Ciencia Ficción</option>
-                    <option value="Drama.html">Drama</option>
+                    <option value="" disabled selected>categorias</option>
+                    <option value="AccionP.html">Acción</option>
+                    <option value="TerrorP.html">Terror</option>
+                    <option value="ComediaP.html">Comedia</option>
+                    <option value="Ciencia_FiccionP.html">Ciencia Ficción</option>
+                    <option value="DramaP.html">Drama</option>
                     <!-- Agrega más opciones de categorías según tus necesidades y asegúrate de que los archivos .html existan en tu proyecto -->
                 </select>
             </div>
@@ -34,7 +35,9 @@
                         <path d="M4 9a5 5 0 1110 0A5 5 0 014 9zm5-7a7 7 0 104.2 12.6.999.999 0 00.093.107l3 3a1 1 0 001.414-1.414l-3-3a.999.999 0 00-.107-.093A7 7 0 009 2z" fill-rule="evenodd" fill="#17202A"></path>
                     </svg>
                 </button>
-                <input type="text" name="text" class="input__search" placeholder="¿Qué deseas buscar?">
+               
+				
+				<input type="text" name="buscador" id="buscador" placeholder="¿Que quieres ver hoy?">
             </div>
         </div>
     </header>
@@ -44,12 +47,20 @@
 			<div class="contenedor">
 				<h3 class="titulo">Venom</h3>
 				<p class="descripcion">
-                    El periodista Eddie Brock intenta desenmascarar al genio científico Carlton Drake, el célebre fundador de la Fundación Vida. Mientras investiga uno de los experimentos de Drake, Brock establece una simbiosis con un ente alienígena que le ofrece superpoderes, pero el ser se apodera de su personalidad y lo vuelve perverso
+					Una mirada escalofriante a los relatos de personas latinoamericanas que han sido testigos de sucesos sobrenaturales y otros fenómenos inexplicables.
 				</p>
-				<button role="button" class="boton"><i class="fas fa-play"></i>Reproducir</button>
+				<a href="#" class="play" onclick="toggleVideo();">
+                    <img src="./img/play.png" />Trailer
 				<button role="button" class="boton"><i class="fas fa-info-circle"></i>Más información</button>
+                </a>
+				
 			</div>
 		</div>
+        <section class="trailer">
+            <video src="./img/VENOM  Official Trailer HD_480p.mp4" controls="true"></video>
+            <img src="./img/close.png" class="close" onclick="toggleVideo();">
+    
+          </section>
 
 		<div class="peliculas-recomendadas contenedor">
 			<div class="contenedor-titulo-controles">
@@ -62,334 +73,97 @@
 
 				<div class="contenedor-carousel">
 					<div class="carousel">
-						<div class="pelicula">
-							<a href="https://youtu.be/_GZdqPAWrO8?si=vzRpyt80R7QA7N-F">
-								<img src="img/imapeli/ima11.jpg" alt="primer trailer">
-							</a>
+
+						<ul class="carousel">
+
 							
-						</div>
-						<div class="pelicula">
-							<a href="https://youtu.be/202KkD12AuI?si=Q9-rL9JTZFIUp0rV">
-								<img src="img/imapeli/ima22.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="https://www.youtube.com/watch?v=CIyBwD-wvL4"><img src="img/tendencia3.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="https://www.youtube.com/watch?v=N2lzGmhf0yY"><img src="img/tendencia4.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="https://www.youtube.com/watch?v=k397HRbTtWI"><img src="img/tendencia5.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="https://www.youtube.com/watch?v=l3IwD94ddL8"><img src="img/tendencia6.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="https://www.youtube.com/watch?v=zcRl1QqcX8I"><img src="img/tendencia7.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="https://www.youtube.com/watch?v=L4JFiGpvMXY"><img src="img/tendencia8.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="https://www.youtube.com/watch?v=-VmasyBd31k"><img src="img/tendencia9.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="https://www.youtube.com/watch?v=fHDCtCjNlRw"><img src="img/tendencia10.png" alt=""></a>
-						</div>
+
+							<li class="pelicula">
+								<div class="pelicula">
+									<a href="https://www.youtube.com/watch?v=Qs-NylETt1E"  target="_blank">
+                                        <img src="img/caballero oscuro.jpg" alt="primer trailer">
+									</a>
+									<p>you are not </p>							
+								</div>
+							</li>
+							<li class="pelicula">
+								<div class="pelicula">
+									<a href="https://www.youtube.com/watch?v=VrCzupeWvuY"  target="_blank">
+                                        <img src="img/Paramo.jpeg" alt="primer trailer">
+									</a>
+									<p>choose love</p>
+								</div>
+								
+							</li>
+							<li class="pelicula">
+								<div class="pelicula">
+									<a href="https://www.youtube.com/watch?v=QqVFXyaRL90"  target="_blank">
+                                        <img src="/img/Que paso.jpeg" alt="primer trailer">
+									</a>
+									<p>the croods</p>							
+								</div>
+							</li>
+							<li class="pelicula">
+								<div class="pelicula">
+									<a href="https://www.youtube.com/watch?v=tUOQHCiHcfU"  target="_blank">
+                                        <img src="img/proyecto X.jpeg" alt="">
+									<p>the  grinch</p>
+								</div>
+							</li>
+							<li class="pelicula">
+								<div class="pelicula">
+									<a href="https://www.youtube.com/watch?v=u0hxjdWG84k"  target="_blank">
+                                        <img src="img/avatar.jpeg" alt="">
+									</a>	
+									<p>boss baby</p>						
+								</div>
+							</li>
+							<li class="pelicula">
+								<div class="pelicula">
+									<a href="https://www.youtube.com/watch?v=vWhX8aTj5TI"  target="_blank">
+                                        <img src="img/A DOS METROS DE TI.jpeg" alt="primer trailer">
+									<p>snitch</p>
+								</div>
+							</li>
+							<li class="pelicula">
+								<div class="pelicula">
+									<a href="https://www.youtube.com/watch?v=gH6J_rvgKf0"  target="_blank">
+                                        <img src="img/vida.jpeg" alt="">
+									</a>
+									<p>love again</p>							
+								</div>
+							</li>
+							<li class="pelicula">
+								<div class="pelicula">
+									<a href="https://www.youtube.com/watch?v=vTutJ2_E1Vo"  target="_blank">
+                                        <img src="img/Terrifier.jpeg" alt="">
+									<p>jack reacher never go back</p>
+								</div>
+							</li>						
+						</ul>	
 					</div>
 				</div>
 
 				<button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
 			</div>
 		</div>
-
-        <section class="movies-container">
-            <h2>Peliculas mas vistas</h2>
-            <hr>
-            <div class="box-container-1">
-                <div class="box-1">
-                    <div class="content">
-                        <a href="https://www.youtube.com/watch?v=L0anWmmd8TI">
-                            <img src="img/john.jpg" alt="">
-                        </a>
-                        <h3>John Wick 4</h3>
-                        <p>
-                            El marqués Vincent de Gramont pretende matar a John Wick
-                            para afianzar su poder en la Orden Suprema. Sin embargo, tratará <br>de adelantarse a cada uno de <br> movimientos hasta lograr enfrentarse cara a cara con su peor enemigo.
-                        </p>
-                    </div>
-                </div>
-    
-                <div class="box-1">
-                    <div class="content">
-                        <img src="img/tendencia2.png" alt="">
-                        <h3>peliculada h2</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet
-                        </p>
-                    </div>
-                </div>
-    
-                <div class="box-1">
-                    <div class="content">
-                        <img src="img/tendencia3.png" alt="">
-                        <h3>peliculada h2</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet
-                        </p>
-                    </div>
-                </div>
-    
-                <div class="box-1">
-                    <div class="content">
-                        <img src="img/tendencia4.png" alt="">
-                        <h3>peliculada h2</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet
-                        </p>
-    
-                    </div>
-                </div>
-    
-                <div class="box-1">
-                    <div class="content">
-                        <img src="img/tendencia5.png" alt="">
-                        <h3>peliculada h2</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet
-                        </p>
-    
-                    </div>
-                </div>
-    
-                <div class="box-1">
-                    <div class="content">
-                        <img src="img/tendencia6.png" alt="">
-                        <h3>peliculada h2</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet
-                        </p>
-    
-                    </div>
-                </div>
-    
-                <div class="box-1">
-                    <div class="content">
-                        <img src="img/tendencia7.png" alt="">
-                        <h3>peliculada h2</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet
-                        </p>
-    
-                    </div>
-                </div>
-    
-                <div class="box-1">
-                    <div class="content">
-                        <img src="img/tendencia8.png" alt="">
-                        <h3>peliculada h2</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet
-                        </p>
-    
-                    </div>
-                </div>
-            </div>
-            <div class="load-more " id="load-more-1">cargar mas</div>
-    
-        </section>
-    
-        <section class="movies-container">
-            <h2>Peliculas accion</h2>
-            <hr>
-    
-            <div class="box-container-2">
-                <div class="box-2">
-                    <div class="content">
-                        <img src="img/tendencia9.png" alt="">
-                        <h3>peliculada h2</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet
-                        </p>
-                    </div>
-                </div>
-    
-                <div class="box-2">
-                    <div class="content">
-                        <img src="img/tendencia10.png" alt="">
-                        <h3>peliculada h2</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet
-                        </p>
-                    </div>
-                </div>
-    
-                <div class="box-2">
-                    <div class="content">
-                        <img src="img/serie1.png" alt="">
-                        <h3>peliculada h2</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet
-                        </p>
-                    </div>
-                </div>
-    
-                <div class="box-2">
-                    <div class="content">
-                        <img src="img/serie2.png" alt="">
-                        <h3>peliculada h2</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet
-                        </p>
-    
-                    </div>
-                </div>
-    
-                <div class="box-2">
-                    <div class="content">
-                        <img src="img/serie3.png" alt="">
-                        <h3>peliculada h2</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet
-                        </p>
-    
-                    </div>
-                </div>
-    
-                <div class="box-2">
-                    <div class="content">
-                        <img src="img/serie4.png" alt="">
-                        <h3>peliculada h2</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet
-                        </p>
-    
-                    </div>
-                </div>
-    
-                <div class="box-2">
-                    <div class="content">
-                        <img src="img/serie5.png" alt="">
-                        <h3>peliculada h2</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet
-                        </p>
-    
-                    </div>
-                </div>
-    
-                <div class="box-2">
-                    <div class="content">
-                        <img src="img/serie6.png" alt="">
-                        <h3>peliculada h2</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet
-                        </p>
-    
-                    </div>
-                </div>
-            </div>
-            <div class="load-more " id="load-more-2">cargar mas</div>
-    
-        </section>
-    
-        <section class="movies container">
-            <h2>estreno</h2>
-            <hr>
-    
-            <div class="box-container-3">
-                <div class="box-3">
-                    <div class="content">
-                        <img src="jpg" alt="">
-                        <h3>peliculada h2</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet
-                        </p>
-                    </div>
-                </div>
-    
-                <div class="box-3">
-                    <div class="content">
-                        <img src="jpg" alt="">
-                        <h3>peliculada h2</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet
-                        </p>
-                    </div>
-                </div>
-    
-                <div class="box-3">
-                    <div class="content">
-                        <img src="jpg" alt="">
-                        <h3>peliculada h2</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet
-                        </p>
-                    </div>
-                </div>
-    
-                <div class="box-3">
-                    <div class="content">
-                        <img src="jpg" alt="">
-                        <h3>peliculada h2</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet
-                        </p>
-    
-                    </div>
-                </div>
-    
-                <div class="box-3">
-                    <div class="content">
-                        <img src="jpg" alt="">
-                        <h3>peliculada h2</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet
-                        </p>
-    
-                    </div>
-                </div>
-    
-                <div class="box-3">
-                    <div class="content">
-                        <img src="jpg" alt="">
-                        <h3>peliculada h2</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet
-                        </p>
-    
-                    </div>
-                </div>
-    
-                <div class="box-3">
-                    <div class="content">
-                        <img src="jpg" alt="">
-                        <h3>peliculada h2</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet
-                        </p>
-    
-                    </div>
-                </div>
-    
-                <div class="box-3">
-                    <div class="content">
-                        <img src="jpg" alt="">
-                        <h3>peliculada h2</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet
-                        </p>
-    
-                    </div>
-                </div>
-            </div>
-            <div class="load-more " id="load-more-3">cargar mas</div>
-    
-        </section>
 	</main>
-	
+    <div class="contenedor">  
+
+    <script src="/js/buscador.js"></script>
+    <script>
+        function toggleVideo(){
+            const trailer= document.querySelector(".trailer");
+            const video = document.querySelector("video");
+            trailer.classList.toggle("active");
+            video.currentTime=0;
+            video.pause();
+
+        }
+    </script>
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 	<script src="js/main.js"></script>
+    
 
     <script>
         function redireccionar() {
