@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/stylese.css">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="/css/Buscador.css">
+	<title>PELICULIX</title>
+</head>
+<body>
+	<header>
+        <div class="contenedor">
+            <a href="index.html" class="logotipo">PELICULIX</a>
+            <nav>
+                <a href="index.html" class="activo">Inicio</a>
+                <a href="Peliculas.html">Películas</a>
+                <a href="Series.html">Series</a>
+            </nav>
+            <div class="input__container">
+                <select id="categorias" onchange="redireccionar()">
+                    <option value="" disabled selected>categorias</option>
+                    <option value="Accion.html">Acción</option>
+                    <option value="Terror.html">Terror</option>
+                    <option value="Comedia.html">Comedia</option>
+                    <option value="Ciencia_ficcion.html">Ciencia Ficción</option>
+                    <option value="Drama.html">Drama</option>
+                    <!-- Agrega más opciones de categorías según tus necesidades y asegúrate de que los archivos .html existan en tu proyecto -->
+                </select>
+            </div>
+            <div class="input__container">
+                <div class="shadow__input"></div>
+                <button class="input__button__shadow">
+                    <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" height="20px" width="20px">
+                        <path d="M4 9a5 5 0 1110 0A5 5 0 014 9zm5-7a7 7 0 104.2 12.6.999.999 0 00.093.107l3 3a1 1 0 001.414-1.414l-3-3a.999.999 0 00-.107-.093A7 7 0 009 2z" fill-rule="evenodd" fill="#17202A"></path>
+                    </svg>
+                </button>
+               
+				
+				<input type="text" name="buscador" id="buscador" placeholder="¿Que quieres ver hoy?">
+            </div>
+        </div>
+    </header>
+
+	<main>
+		<div class="pelicula-principal">
+			<div class="contenedor">
+				<h3 class="titulo">Haunted: Latinoamérica</h3>
+				<p class="descripcion">
+					Una mirada escalofriante a los relatos de personas latinoamericanas que han sido testigos de sucesos sobrenaturales y otros fenómenos inexplicables.
+				</p>
+				<a href="#" class="play" onclick="toggleVideo();">
+                    <img src="./img/play.png" />Trailer
+				<button role="button" class="boton"><i class="fas fa-info-circle"></i>Más información</button>
+                </a>
+				
+			</div>
+		</div>
+        <section class="trailer">
+            <video src="./img/HAUNTED.mp4" controls="true"></video>
+            <img src="./img/close.png" class="close" onclick="toggleVideo();">
+    
+          </section>
+
+		<div class="peliculas-recomendadas contenedor">
+			<div class="contenedor-titulo-controles">
+				<h3>TOP 10 Series mas vistas</h3>
+				<div class="indicadores"></div>
+			</div>
+
+			<div class="contenedor-principal">
+				<button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+
+				<div class="contenedor-carousel">
+					<div class="carousel">
+
+						
+							
+
+						
+								<div class="pelicula">
+									<a href="https://www.youtube.com/watch?v=2kOMw4mm2mU"  target="_blank">
+										<img src="img/rueda.jpg" alt="">
+									</a>
+									<p>Morbius</p>							
+								</div>
+							
+								<div class="pelicula">
+                                    <a href="https://www.youtube.com/watch?v=71F_UoBbIZA"  target="_blank">
+										<img src="img/chuky.png" alt=""></a>
+									</a>
+									<p>Chuky</p>
+								</div>
+								
+							
+								<div class="pelicula">
+									<a href="https://www.youtube.com/watch?v=B0ePc-h8SRg"  target="_blank">
+										<img src="img/terapia.jpeg" alt=""></a>
+									</a>
+									<p>Terapia sin filtro</p>							
+								</div>
+							
+								<div class="pelicula">
+									<a href="https://www.youtube.com/watch?v=IDWUhK6heHM"  target="_blank">
+										<img src="img/perdidos-en-el-espacio.webp" alt=""></a>
+									<p>lost in space</p>
+								</div>
+							
+								<div class="pelicula">
+									<a href="https://www.youtube.com/watch?v=JRkNZRW41LE"  target="_blank">
+										<img src="img/romina-poderosa-de-caracol.jpg" alt=""></a>
+									</a>	
+									<p>Romina</p>						
+								</div>
+							
+								<div class="pelicula">
+									<a href="https://www.youtube.com/watch?v=m_82G7x5i54"  target="_blank">
+										<img src="img/mar.jpg" alt="">
+									</a>
+									<p>Capitana marvel</p>
+								</div>
+						
+								<div class="pelicula">
+									<a href="https://www.youtube.com/watch?v=wMofLWJCV0U"  target="_blank">
+										<img src="img/mari.jpg" alt=""></a>
+									</a>
+									<p>Marianne</p>							
+								</div>
+							
+								<div class="pelicula">
+									<a href="https://www.youtube.com/watch?v=Ro3iCwDUWFI"  target="_blank">
+										<img src="img/dahmer.jpg" alt=""></a>
+									<p>Dahmer</p>
+								</div>
+												
+						
+					</div>
+				</div>
+
+				<button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+			</div>
+		</div>
+	</main>
+	
+	<script src="/js/buscador.js"></script>
+	<script>
+        function toggleVideo(){
+            const trailer= document.querySelector(".trailer");
+            const video = document.querySelector("video");
+            trailer.classList.toggle("active");
+            video.currentTime=0;
+            video.pause();
+
+        }
+    </script>
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	<script src="js/main.js"></script>
+
+    <script>
+        function redireccionar() {
+            var seleccion = document.getElementById("categorias").value;
+            if (seleccion) {
+                window.location.href = seleccion; // Redirige a la página de categoría seleccionada
+            }
+        }
+    </script>
+	
+</body>
+</html>
