@@ -3,14 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/estilos.css">
 	<link rel="stylesheet" href="css/Buscador.css">
 	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
-
 	<link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
 	<link rel="manifest" href="/site.webmanifest">
+	<link rel="stylesheet" href="/node_modules/eins-modal/dist/css/eins-modal.min.css">
+	<link rel="stylesheet" href="css/index.css">
 
 	<title>PELICULIX</title>
 </head>
@@ -42,121 +42,250 @@
 	<main>
 		<div class="pelicula-principal">
 			<div class="contenedor">
-				<h3 class="titulo">Venom</h3>
+				<h3 class="titulo">POKEMON Detective Pikachu</h3>
 				<p class="descripcion">
-					Narra las aventuras de un grupo de exploradores que hacen uso de un agujero de gusano recientemente descubierto para superar las limitaciones de los viajes espaciales tripulados y vencer las inmensas distancias que tiene un viaje interestelar.
+					Un joven une fuerzas con el detective Pikachu para desentrañar el misterio detrás de la desaparición de su padre. El dúo dinámico descubre una trama tortuosa que representa una amenaza para el universo Pokémon.
 				</p>
-				<button role="button" class="boton"><i class="fas fa-play"></i>Reproducir</button>
+				<a href="#" class="play" onclick="toggleVideo();">
+                    <img src="./img/play.png" />Trailer
+                </a>
 				<button role="button" class="boton"><i class="fas fa-info-circle"></i>Más información</button>
 			</div>
 		</div>
+		<section class="trailer">
+            <video src="./img/POKEMON Detective Pikachu Trailer Español (2019) (1).mp4" controls="true"></video>
+            <img src="./img/close.png" class="close" onclick="toggleVideo();">
+          </section>
 
 		<div class="peliculas-recomendadas contenedor">
 			<div class="contenedor-titulo-controles">
 				<h3>Películas Recomendadas</h3>
 				<div class="indicadores"></div>
 			</div>
-
 			<div class="contenedor-principal">
 				<button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
-
 				<div class="contenedor-carousel">
 					<div class="carousel">
-
-							
 								<div class="pelicula">
-									<a href="https://youtu.be/Tn6T_ZzBh0Y" target="_blank">
-										<img loading="lazy" src="img/tendencia2.png" alt=""></a>
+									<a data-modal-id="pw-ropbodactav1"><img loading="lazy" src="img/tendencia2.png" alt=""></a>
 										<p>choose love</p>
-								</div>
-							
+								</div>							
 								<div class="pelicula">
-									<a href=" https://youtu.be/q6ootctQD_c" target="_blank">
-										<img loading="lazy" src="img/tendencia3.png" alt=""></a>
+									<a data-modal-id="pw-ropbodactav2"><img loading="lazy" src="img/tendencia3.png" alt=""></a>
 									<p>the croods</p>
 								</div>
-							
 								<div class="pelicula">
-									<a href="https://youtu.be/N2lzGmhf0yY" target="_blank">
-										<img loading="lazy"  src="img/tendencia4.png" alt=""></a>
+									<a data-modal-id="pw-ropbodactav3"><img loading="lazy"  src="img/tendencia4.png" alt=""></a>
 									<p>the grinch</p>
 								</div>
-							
 								<div class="pelicula">
-									<a href="https://youtu.be/SXpVk9uKL8I" target="_blank"><img  loading="lazy" src="img/tendencia5.png" alt=""></a>
+									<a data-modal-id="pw-ropbodactav4"><img  loading="lazy" src="img/tendencia5.png" alt=""></a>
 									<p>boss baby</p>
 								</div>
-							
 								<div class="pelicula">
-									<a href="https://youtu.be/9hVbXw8LzJU" target="_blank"><img loading="lazy"  src="img/tendencia6.png" alt=""></a>
+									<a data-modal-id="pw-ropbodactav5"><img loading="lazy"  src="img/tendencia6.png" alt=""></a>
 									<p>snitch</p>
 								</div>
-							
 								<div class="pelicula">
-									<a href="https://youtu.be/kXAiC5v9fSQ"  target="_blank"><img loading="lazy"  src="img/tendencia7.png" alt=""></a>
+									<a data-modal-id="pw-ropbodactav6"><img loading="lazy"  src="img/tendencia7.png" alt=""></a>
 									<p>love again</p>
 								</div>
 						
 								<div class="pelicula">
-									<a href="https://youtu.be/ooI5LY6wgMk"  target="_blank"><img loading="lazy" src="img/tendencia9.png" alt=""></a>
+									<a data-modal-id="pw-ropbodactav7"><img loading="lazy" src="img/tendencia9.png" alt=""></a>
 									<p>heart of stone</p>
 								</div>
 							
 								<div class="pelicula">
-									<a href="https://youtu.be/Xt2C3_TmwRk"  target="_blank"><img loading="lazy"  src="img/tendencia10.png" alt=""></a>
+									<a data-modal-id="pw-ropbodactav8"><img loading="lazy"  src="img/tendencia10.png" alt=""></a>
 									<p>jack reacher</p>
 								</div>
-							
 						</div>
-
-						
-					
-				
-
 				<button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
 			</div>
 		</div>
+
         <div class="peliculas-recomendadas contenedor">
 			<div class="contenedor-titulo-controles">
 				<h3>Series Recomendadas</h3>
 				<div class="indicadores"></div>
 			</div>
-
 			<div class="contenedor-principal">
 				<button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
-
 				<div class="contenedor-carousel">
 					<div class="carousel">
 						<div class="pelicula">
-							<a href="https://youtu.be/64kE5kDYVR"  target="_blank"><img loading="lazy"  src="img/serie1.png" alt=""></a>
+							<a data-modal-id="pw-ropbodactav9"><img loading="lazy"  src="img/serie1.png" alt=""></a>
 							<p>One piece</p>
 						</div>
 						<div class="pelicula">
-							<a href=" https://youtu.be/l4NUCOPR7L8"  target="_blank"><img loading="lazy"  src="img/serie2.png" alt=""></a>
+							<a data-modal-id="pw-ropbodactav12"><img loading="lazy"  src="img/serie2.png" alt=""></a>
 							<p>virgin river</p>
 						</div>
 						<div class="pelicula">
-							<a href="https://youtu.be/RZ3e14BiFRw"  target="_blank"><img loading="lazy"  src="img/serie3.png" alt=""></a>
+							<a data-modal-id="pw-ropbodactav13"><img loading="lazy"  src="img/serie3.png" alt=""></a>
 							<p>who is erin carter </p>
 						</div>
 						<div class="pelicula">
-							<a href="https://youtu.be/nOH8PwdpiD8"  target="_blank"><img loading="lazy"  src="img/serie4.png" alt=""></a>
+							<a data-modal-id="pw-ropbodactav14"><img loading="lazy"  src="img/serie4.png" alt=""></a>
 							<p>top boy</p>
 						</div>
 						<div class="pelicula">
-							<a href="https://youtu.be/it-8MIm29bI"  target="_blank"><img loading="lazy"  src="img/serie5.png" alt=""></a>
+							<a data-modal-id="pw-ropbodactav15"><img loading="lazy"  src="img/serie5.png" alt=""></a>
 							<p>Live to 100</p>
 						</div>
 					</div>
 				</div>
-
 				<button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
 			</div>
 		</div>
 	</main>
+
 	<script src="js/buscador.js"></script>
+
+	<script>
+        function toggleVideo(){
+            const trailer= document.querySelector(".trailer");
+            const video = document.querySelector("video");
+            trailer.classList.toggle("active");
+            video.currentTime=0;
+            video.pause();
+
+        }
+    </script>
 	
 	<script src="https://kit.fontctivowesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 	<script src="js/main.js"></script>
+	<script src="/node_modules/eins-modal/dist/js/eins-modal.min.js"></script>
+	
+	<!-- Modal section 1-->
+
+<div id="pw-ropbodactav1" class="eins-modal" data-options="openTransition: expandIn;
+	openDuration: 200;">
+	
+	<div class="eins-modal-content"> 
+		<div class="eins-modal-close"></div>
+		   <div class="eins-modal-preview">
+			<iframe width="460" height="375" src="https://www.youtube.com/embed/Tn6T_ZzBh0Y?si=PdohV1BOpOYbTd_e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>		</div>	
+	</div>
+</div>
+<!-- Modal section 2-->
+<div id="pw-ropbodactav2" class="eins-modal" data-options="openTransition: expandIn;
+	openDuration: 200;">
+	
+	<div class="eins-modal-content"> 
+		<div class="eins-modal-close"></div>
+		   <div class="eins-modal-preview">
+			<iframe width="460" height="375" src="https://www.youtube.com/embed/q6ootctQD_c?si=6n3j6qX8isAyBVFC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>		</div>	
+	</div>
+</div>
+<!-- Modal section 3-->
+<div id="pw-ropbodactav3" class="eins-modal" data-options="openTransition: expandIn;
+	openDuration: 200;">
+	
+	<div class="eins-modal-content"> 
+		<div class="eins-modal-close"></div>
+		   <div class="eins-modal-preview">
+			<iframe width="460" height="375" src="https://www.youtube.com/embed/N2lzGmhf0yY?si=d6z4EvY-VuBdOD7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>		</div>	
+	</div>
+</div>
+<!-- Modal section 4-->
+<div id="pw-ropbodactav4" class="eins-modal" data-options="openTransition: expandIn;
+	openDuration: 200;">
+	
+	<div class="eins-modal-content"> 
+		<div class="eins-modal-close"></div>
+		   <div class="eins-modal-preview">
+			<iframe width="460" height="375" src="https://www.youtube.com/embed/SXpVk9uKL8I?si=AmP6yE8ZMaqkTuUH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>		</div>	
+	</div>
+</div>
+<!-- Modal section 5-->
+<div id="pw-ropbodactav5" class="eins-modal" data-options="openTransition: expandIn;
+	openDuration: 200;">
+	
+	<div class="eins-modal-content"> 
+		<div class="eins-modal-close"></div>
+		   <div class="eins-modal-preview">
+			<iframe width="460" height="375" src="https://www.youtube.com/embed/9hVbXw8LzJU?si=ZuM3u931ggXzwQYt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>		</div>	
+	</div>
+</div>
+<!-- Modal section 6-->
+<div id="pw-ropbodactav6" class="eins-modal" data-options="openTransition: expandIn;
+	openDuration: 200;">
+	
+	<div class="eins-modal-content"> 
+		<div class="eins-modal-close"></div>
+		   <div class="eins-modal-preview">
+			<iframe width="460" height="375" src="https://www.youtube.com/embed/kXAiC5v9fSQ?si=tg3-x2aQjktP66hm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>	</div>
+</div>
+<!-- Modal section 7-->
+<div id="pw-ropbodactav7" class="eins-modal" data-options="openTransition: expandIn;
+	openDuration: 200;">
+	
+	<div class="eins-modal-content"> 
+		<div class="eins-modal-close"></div>
+		   <div class="eins-modal-preview">
+			<iframe width="460" height="375" src="https://www.youtube.com/embed/ooI5LY6wgMk?si=EhyZYyPc2AieoMBC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>	</div>
+</div>
+<!-- Modal section 8-->
+<div id="pw-ropbodactav8" class="eins-modal" data-options="openTransition: expandIn;
+	openDuration: 200;">
+	
+	<div class="eins-modal-content"> 
+		<div class="eins-modal-close"></div>
+		   <div class="eins-modal-preview">
+			<iframe width="460" height="375" src="https://www.youtube.com/embed/Xt2C3_TmwRk?si=3PIyhkvPs3JjTK47" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+
+	<!-- Modal section SERIES 1-->
+
+	<div id="pw-ropbodactav9" class="eins-modal" data-options="openTransition: expandIn;
+	openDuration: 200;">
+	
+	<div class="eins-modal-content"> 
+		<div class="eins-modal-close"></div>
+		   <div class="eins-modal-preview">
+			<iframe width="460" height="375" src="https://www.youtube.com/embed/JoO7TGG2Kms?si=2KpxM4St6WxdOkss" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>		</div>	
+	</div>
+</div>
+<!-- Modal section 12-->
+<div id="pw-ropbodactav12" class="eins-modal" data-options="openTransition: expandIn;
+	openDuration: 200;">
+	
+	<div class="eins-modal-content"> 
+		<div class="eins-modal-close"></div>
+		   <div class="eins-modal-preview">
+			<iframe width="460" height="375" src="https://www.youtube.com/embed/l4NUCOPR7L8?si=bDxg8vooe5N20fiZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>		</div>	
+	</div>
+</div>
+<!-- Modal section 13-->
+<div id="pw-ropbodactav13" class="eins-modal" data-options="openTransition: expandIn;
+	openDuration: 200;">
+	
+	<div class="eins-modal-content"> 
+		<div class="eins-modal-close"></div>
+		   <div class="eins-modal-preview">
+			<iframe width="460" height="375" src="https://www.youtube.com/embed/RZ3e14BiFRw?si=MGw4YsZjXZUIUP8G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>		</div>	
+	</div>
+</div>
+<!-- Modal section 14-->
+<div id="pw-ropbodactav14" class="eins-modal" data-options="openTransition: expandIn;
+	openDuration: 200;">
+	
+	<div class="eins-modal-content"> 
+		<div class="eins-modal-close"></div>
+		   <div class="eins-modal-preview">
+			<iframe width="460" height="375" src="https://www.youtube.com/embed/nOH8PwdpiD8?si=oeP50C9ll_HB74Mo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>		</div>	
+	</div>
+</div>
+<!-- Modal section 15-->
+<div id="pw-ropbodactav15" class="eins-modal" data-options="openTransition: expandIn;
+	openDuration: 200;">
+	
+	<div class="eins-modal-content"> 
+		<div class="eins-modal-close"></div>
+		   <div class="eins-modal-preview">
+			<iframe width="460" height="375" src="https://www.youtube.com/embed/it-8MIm29bI?si=GX1Zk-vlFPigPQY5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>		</div>	
+	</div>
+</div>
 </body>
 </html>
