@@ -1,0 +1,22 @@
+{
+  "name": "peliculix",
+  "version": "1.0.0",
+  "description": "trailers de peliculas",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Angelpdt/Peliculix.git"
+  },
+  "author": "Yulang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Angelpdt/Peliculix/issues"
+  },
+  "homepage": "https://github.com/Angelpdt/Peliculix#readme",
+  "dependencies": {
+    "eins-modal": "^2.2.2"
+  }
+}
